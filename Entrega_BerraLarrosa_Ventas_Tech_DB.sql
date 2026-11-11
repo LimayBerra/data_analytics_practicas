@@ -8,7 +8,7 @@ DROP TABLE IF EXISTS Productos;
 DROP TABLE IF EXISTS Clientes;
 DROP TABLE IF EXISTS Categorías;
 
-___ SECCIÓN 1: CREAR TABLAS ___
+___ SECCIÓN 2: CREAR TABLAS ___
 CREATE TABLE Categorías(
 Id_Categoría INT IDENTITY(1,1) PRIMARY KEY,
 Nombre_categoría VARCHAR(50) NOT NULL,
@@ -46,7 +46,7 @@ CONSTRAINT FK_Ventas_Cliente FOREIGN KEY(Id_Cliente) REFERENCES Clientes(Id_Clie
 CONSTRAINT FK_Ventas_Producto FOREIGN KEY(Id_Producto) REFERENCES Productos(Id_Producto)
 );
 
-___ SECCIÓN 1: INSERTAR DATOS ___
+___ SECCIÓN 3: INSERTAR DATOS ___
 INSERT INTO Categorías (Nombre_categoría, Descripción) VALUES
   ('Computación',    'Laptops, PCs y monitores'),
   ('Accesorios',     'Periféricos y complementos'),
@@ -80,7 +80,7 @@ INSERT INTO Ventas (Id_Cliente, Id_Producto, Cantidad, Precio_unitario, Fecha_ve
   (4, 4, 1,  120.00, '2024-03-14'),
   (5, 3, 2,  450.00, '2024-03-15');
 
-___ SECCIÓN 1: VALIDACIÓN ___
+___ SECCIÓN 4: VALIDACIÓN ___
 SELECT * FROM Categorías;
 SELECT * FROM Clientes;
 SELECT * FROM Productos;
